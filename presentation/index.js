@@ -26,10 +26,11 @@ require("normalize.css");
 
 const theme = createTheme(
   {
-    primary: "white",
-    secondary: "#1F2022",
-    tertiary: "#03A9FC",
-    quarternary: "#CECECE"
+    primary: "#011321",
+    secondary: "#1B7AC3",
+    tertiary: "#7EC0F3",
+    quarternary: "#B7D4EA",
+    pentanary: "#5399CE"
   },
   {
     primary: "Montserrat",
@@ -44,8 +45,9 @@ export default class Presentation extends React.Component {
         transition={["zoom", "slide"]}
         transitionDuration={500}
         theme={theme}
+        bgColor="primary"
       >
-        <Slide transition={["zoom"]} bgColor="primary">
+        <Slide transition={["zoom"]}>
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Prettier
           </Heading>
@@ -70,7 +72,7 @@ export default class Presentation extends React.Component {
           - Configuration
         #. Additional Resources
          */}
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={["fade"]} bgColor="primary">
           <Appear>
             <Heading size={2}>Sample Code</Heading>
           </Appear>
@@ -79,12 +81,16 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
         <Slide>
-          <Heading size={6} textAlign="left">
+          <Heading size={6} textAlign="left" textColor="secondary">
             Additional Resources
           </Heading>
-          <List type="A">
+          <List type="A" textColor="pentanary">
             <ListItem textSize="1em">
-              <Link href="https://prettier.io/" target="_blank">
+              <Link
+                href="https://prettier.io/"
+                target="_blank"
+                textColor="pentanary"
+              >
                 https://prettier.io/
               </Link>
             </ListItem>
@@ -92,18 +98,23 @@ export default class Presentation extends React.Component {
               <Link
                 href="https://jlongster.com/A-Prettier-Formatter"
                 target="_blank"
+                textColor="pentanary"
               >
                 A Prettier Formatter (launch announcement)
               </Link>
             </ListItem>
             <ListItem textSize="1em">
-              <Link href="https://twitter.com/jlongster" target="_blank">
+              <Link
+                href="https://twitter.com/jlongster"
+                target="_blank"
+                textColor="pentanary"
+              >
                 @jlongster
               </Link>
             </ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={["fade"]}>
           <Heading size={6} textColor="primary" caps>
             Typography
           </Heading>
