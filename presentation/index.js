@@ -3,15 +3,19 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   BlockQuote,
   Cite,
   Deck,
   Heading,
   ListItem,
   List,
+  Link,
   Quote,
   Slide,
-  Text
+  Text,
+  Code,
+  CodePane
 } from "spectacle";
 
 // Import theme
@@ -43,11 +47,61 @@ export default class Presentation extends React.Component {
       >
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            Prettier
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+            An opinionated approach to code formatting
           </Text>
+        </Slide>
+        {/* 
+        #. What is it?
+        #. What problem does it fix?
+          - Compare vs linters
+        #. How does it work?
+        #. Support
+          - Languages
+          - Editors
+          - Git Commit Hooks
+        #. Editor Support
+        #. Demo
+          - ES6 Sample
+          - VS Code Sample
+          - Git Commit Hook Sample
+          - Configuration
+        #. Additional Resources
+         */}
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Appear>
+            <Heading size={2}>Sample Code</Heading>
+          </Appear>
+          <Appear>
+            <CodePane lang="javascript" source="function butts() {}" />
+          </Appear>
+        </Slide>
+        <Slide>
+          <Heading size={6} textAlign="left">
+            Additional Resources
+          </Heading>
+          <List type="A">
+            <ListItem textSize="1em">
+              <Link href="https://prettier.io/" target="_blank">
+                https://prettier.io/
+              </Link>
+            </ListItem>
+            <ListItem textSize="1em">
+              <Link
+                href="https://jlongster.com/A-Prettier-Formatter"
+                target="_blank"
+              >
+                A Prettier Formatter (launch announcement)
+              </Link>
+            </ListItem>
+            <ListItem textSize="1em">
+              <Link href="https://twitter.com/jlongster" target="_blank">
+                @jlongster
+              </Link>
+            </ListItem>
+          </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
