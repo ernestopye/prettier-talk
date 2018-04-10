@@ -72,20 +72,91 @@ export default class Presentation extends React.Component {
           - Configuration
         #. Additional Resources
          */}
-        <Slide transition={["fade"]} bgColor="primary">
-          <Appear>
-            <Heading size={2}>Sample Code</Heading>
-          </Appear>
-          <Appear>
-            <CodePane lang="javascript" source="function butts() {}" />
-          </Appear>
+        <Slide>
+          <Heading size={2} fit>
+            What does prettier do?
+          </Heading>
+          <Text textColor="tertiary">
+            Prettier parses your JavaScript code, generates an AST (Abstract
+            Syntax Tree), and then reprints your code in a specific format.
+          </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <BlockQuote>
+            <Quote>
+              By far the biggest reason for adopting Prettier is to stop all the
+              on-going debates over styles.
+            </Quote>
+            <Cite>
+              <Link
+                href="https://prettier.io/docs/en/why-prettier.html"
+                target="_blank"
+                textColor="primary"
+              >
+                Prettier Docs
+              </Link>
+            </Cite>
+          </BlockQuote>
         </Slide>
         <Slide>
-          <Heading size={6} textAlign="left" textColor="secondary">
+          <Heading size={2} fit>
+            Why Prettier?
+          </Heading>
+          <List>
+            <ListItem>Put an end to syntax bikeshedding</ListItem>
+            <ListItem>Help newcomers</ListItem>
+            <ListItem>Quit wasting time formatting code</ListItem>
+            <ListItem>Easy to adopt</ListItem>
+            <ListItem>Easy to run against existing repositories</ListItem>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={2} fit>
+            How is it different to a linter?
+          </Heading>
+          <Text textColor="tertiary">
+            A linter will complain about your code. Prettier will clean it up
+            for you.
+          </Text>
+          <Text textColor="tertiary">
+            Don't break up with your linter though!
+          </Text>
+        </Slide>
+        <Slide>
+          <Heading size={2} fit>
+            What languages are supported?
+          </Heading>
+          <List textColor="pentanary">
+            <ListItem>ES2017, JSX, Flow, TypeScript, Vue, JSON</ListItem>
+            <ListItem>CSS3+, Less, SCSS, ...</ListItem>
+            <ListItem>GraphQL Schemas</ListItem>
+            <ListItem>...and more!</ListItem>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={2} fit>
+            What about editors?
+          </Heading>
+          <List textColor="pentanary" fit>
+            <ListItem>VS Code, Atom, Sublime Text, and others</ListItem>
+            <ListItem>
+              ...even vim, although it won't help you exit. 🤔
+            </ListItem>
+            <ListItem>Git hooks (formatting on commit)</ListItem>
+          </List>
+        </Slide>
+        <Slide bgColor="secondary" textColor="primary">
+          <Heading size={2} textColor="primary">
+            🎊 Demo time! 🎉
+          </Heading>
+          <Text>Setup, samples and configuration.</Text>
+        </Slide>
+        <Slide>
+          <Heading size={2} fit>
             Additional Resources
           </Heading>
-          <List type="A" textColor="pentanary">
-            <ListItem textSize="1em">
+          <List textColor="pentanary">
+            <ListItem>
               <Link
                 href="https://prettier.io/"
                 target="_blank"
@@ -94,65 +165,25 @@ export default class Presentation extends React.Component {
                 https://prettier.io/
               </Link>
             </ListItem>
-            <ListItem textSize="1em">
+            <ListItem>
               <Link
                 href="https://jlongster.com/A-Prettier-Formatter"
                 target="_blank"
                 textColor="pentanary"
               >
-                A Prettier Formatter (launch announcement)
+                A Prettier Formatter (announcement)
               </Link>
             </ListItem>
-            <ListItem textSize="1em">
+            <ListItem>
               <Link
                 href="https://twitter.com/jlongster"
                 target="_blank"
                 textColor="pentanary"
               >
-                @jlongster
+                @jlongster (James Long)
               </Link>
             </ListItem>
           </List>
-        </Slide>
-        <Slide transition={["fade"]}>
-          <Heading size={6} textColor="primary" caps>
-            Typography
-          </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
-          </Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Standard List
-          </Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
         </Slide>
       </Deck>
     );
