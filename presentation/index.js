@@ -55,23 +55,6 @@ export default class Presentation extends React.Component {
             An opinionated approach to code formatting
           </Text>
         </Slide>
-        {/* 
-        #. What is it?
-        #. What problem does it fix?
-          - Compare vs linters
-        #. How does it work?
-        #. Support
-          - Languages
-          - Editors
-          - Git Commit Hooks
-        #. Editor Support
-        #. Demo
-          - ES6 Sample
-          - VS Code Sample
-          - Git Commit Hook Sample
-          - Configuration
-        #. Additional Resources
-         */}
         <Slide>
           <Heading size={2} fit>
             What does prettier do?
