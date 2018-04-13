@@ -10,11 +10,13 @@ import {
   Heading,
   ListItem,
   List,
+  Layout,
+  Fit,
+  Fill,
   Link,
   Quote,
   Slide,
   Text,
-  Code,
   CodePane
 } from "spectacle";
 
@@ -30,7 +32,7 @@ const theme = createTheme(
     secondary: "#1B7AC3",
     tertiary: "#7EC0F3",
     quarternary: "#B7D4EA",
-    pentanary: "#5399CE"
+    pentanary: "#5399CE" //don't @ me.
   },
   {
     primary: "Montserrat",
@@ -64,6 +66,44 @@ export default class Presentation extends React.Component {
             Syntax Tree), and then reprints your code in a specific format.
           </Text>
         </Slide>
+        <Slide>
+          <Heading size={4} textColor="secondary">
+            In a nutshell...
+          </Heading>
+          <Layout>
+            <Appear>
+              <Fill>
+                <CodePane
+                  lang="javascript"
+                  source={`//from this
+function foo(  {bar,
+             baz }){
+  const test = 123
+  if ( test== bar) {
+    return   baz;  }
+  return bar; }`}
+                />
+              </Fill>
+            </Appear>
+            <Fit>&nbsp;</Fit>
+            <Appear>
+              <Fill>
+                <CodePane
+                  lang="javascript"
+                  source={`//to this
+function foo({ bar, baz }) {
+  const test = 123;
+  if (test == bar) {
+      return baz;
+  }
+  return bar;
+}
+               `}
+                />
+              </Fill>
+            </Appear>
+          </Layout>
+        </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
             <Quote>
@@ -95,14 +135,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={2} fit>
-            How is it different to a linter?
+            This kinda sounds like a linter?
           </Heading>
+          <Text>&nbsp;</Text>
           <Text textColor="tertiary">
-            A linter will complain about your code. Prettier will clean it up
-            for you.
+            Linters are still great, but Prettier just tends to be better at
+            keeping your code pretty.
           </Text>
+          <Text>&nbsp;</Text>
           <Text textColor="tertiary">
-            Don't break up with your linter though!
+            If you're a fan of eslint, check out prettier-eslint, for a powerful
+            combination!
           </Text>
         </Slide>
         <Slide>
@@ -112,7 +155,7 @@ export default class Presentation extends React.Component {
           <List textColor="pentanary">
             <ListItem>ES2017, JSX, Flow, TypeScript, Vue, JSON</ListItem>
             <ListItem>CSS3+, Less, SCSS, ...</ListItem>
-            <ListItem>GraphQL Schemas</ListItem>
+            <ListItem>GraphQL Schema</ListItem>
             <ListItem>...and more!</ListItem>
           </List>
         </Slide>
@@ -163,7 +206,16 @@ export default class Presentation extends React.Component {
                 target="_blank"
                 textColor="pentanary"
               >
-                @jlongster (James Long)
+                Created by @jlongster (James Long)
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                textColor="pentanary"
+                target="_blank"
+                href="https://github.com/prettier/prettier-eslint"
+              >
+                Prettier + ESLint = 💯
               </Link>
             </ListItem>
           </List>
