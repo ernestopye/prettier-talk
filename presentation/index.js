@@ -56,6 +56,8 @@ export default class Presentation extends React.Component {
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
             An opinionated approach to code formatting
           </Text>
+          <br />
+          <Text textColor="tertiary" textAlign="left">@ErnestoPye</Text>
         </Slide>
         <Slide>
           <Heading size={2} fit>
@@ -117,6 +119,24 @@ function foo({ bar, baz }) {
                 textColor="primary"
               >
                 Prettier Docs
+              </Link>
+            </Cite>
+          </BlockQuote>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <BlockQuote>
+            <Quote>
+              Nobody loves what prettier does to their syntax<br /><br />
+
+              Everyone loves what prettier does to their coworkers' syntax
+            </Quote>
+            <Cite>
+              <Link
+                href="https://www.reddit.com/r/javascript/comments/8as6ns/i_dont_like_prettier/dx14ag5/"
+                target="_blank"
+                textColor="primary"
+              >
+                Reddit
               </Link>
             </Cite>
           </BlockQuote>
